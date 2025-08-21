@@ -41,8 +41,8 @@ module.exports.renderEditForm = async (req, res) => {
   const { id } = req.params;
   const listing = await Listing.findById(id);
   if (!listing) {
-    req.flash("error", "Lisitng not Found");
-    res.redirect("/listings");
+    req.flash("error", "Listing not Found");
+    return res.redirect("/listings");
   }
   let imageUrl = listing.image.url;
   imageUrl = imageUrl.replace("/upload/", "/upload/w_300/");
