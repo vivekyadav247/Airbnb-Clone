@@ -57,8 +57,6 @@ const sessionOptions = {
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // 1 week
     maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
     httpOnly: true, // security purpose
-    secure: true,
-    samesite: "lax",
   },
 };
 
