@@ -83,11 +83,6 @@ app.use((req, res, next) => {
   next();
 });
 
-
-app.get("/", (req, res) => {
-  res.send("hii, I am root");
-});
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
@@ -104,5 +99,4 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server is running on port 3000");
 });
